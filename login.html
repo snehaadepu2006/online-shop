@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - Online Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <h2>Login</h2>
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="msg"></p>
+  </div>
+  <script>
+    function login() {
+      var u = document.getElementById("user").value;
+      var p = document.getElementById("pass").value;
+      if (u === "admin" && p === "1234") {
+        document.getElementById("msg").innerText = "Login successful!";
+        window.location.href = "shop.html";
+      } else {
+        document.getElementById("msg").innerText = "Invalid credentials";
+      }
+    }
+  </script>
+</body>
+</html>
