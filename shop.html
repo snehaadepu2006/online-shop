@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Products</h1>
+  <div class="box">
+    <p>Laptop - ₹50,000 <button onclick="add('Laptop')">Add to Cart</button></p>
+    <p>Phone - ₹20,000 <button onclick="add('Phone')">Add to Cart</button></p>
+    <p>Headphones - ₹2,000 <button onclick="add('Headphones')">Add to Cart</button></p>
+    <h3>Cart: <span id="cart">0</span> items</h3>
+  </div>
+  <script>
+    var count = 0;
+    function add(item) {
+      count++;
+      document.getElementById("cart").innerText = count;
+    }
+  </script>
+</body>
+</html>
